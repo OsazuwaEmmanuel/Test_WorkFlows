@@ -25,10 +25,10 @@ jobs:
       run: g++ -o my_program main.cpp
 
     - name: Run C++ program with input from file
-      run: ./my_program < input.txt
+      run: ./my_program < input.txt > output.txt
 
     - name: Store code as artifact
       uses: actions/upload-artifact@v2
       with:
-        name: my_code
-        path: main.cpp
+        name: data
+        path: output.txt
